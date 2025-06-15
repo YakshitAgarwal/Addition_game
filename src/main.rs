@@ -18,7 +18,10 @@ fn main() {
 
         let answer: u32 = match answer.trim().parse() {
             Ok(num) => num,
-            Err(_) => continue,
+            Err(_) => {
+                println!("Please input a positive number");
+                continue;
+            }
         };
 
         match answer.cmp(&sum) {
